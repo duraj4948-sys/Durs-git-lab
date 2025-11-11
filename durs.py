@@ -1,19 +1,6 @@
-"""
-======================================================
-Durs Password Generator v0.1
-Author: Joshua Dura
-Date: 2025-11-05
-Description:
-     Gibuhat ko kini nga password generator aron makatabang sa
-     paghimo ug luwas ug ma-customize nga mga password.
-     Adunay kini dynamic nga pag-sukod sa kalig-on sa password.
-======================================================
-"""
-
 import random
 import string
 import time
-
 
 def generate_password(length=12, use_letters=True, use_numbers=True, use_symbols=True):
     """Generates a secure random password based on user preferences."""
@@ -30,7 +17,6 @@ def generate_password(length=12, use_letters=True, use_numbers=True, use_symbols
 
     return ''.join(random.choice(chars) for _ in range(length))
 
-
 def password_strength(length):
     """Evaluates password strength based on length."""
     if length < 8:
@@ -39,8 +25,7 @@ def password_strength(length):
         return " MEDIUM"
     else:
         return " STRONG"
-
-
+         
 def main():
     """Main execution flow of the password generator."""
     print("═" * 52)
@@ -65,7 +50,6 @@ def main():
 
     except ValueError:
         print("Invalid input. Please enter a valid number.")
-
 
 if __name__ == "__main__":
     main()
